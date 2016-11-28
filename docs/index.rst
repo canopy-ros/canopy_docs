@@ -17,5 +17,5 @@ The code for both the server stack and client package are open source, and are a
    :glob:
    :caption: User Documentation
 
-   user-docs
+   client-docs
    server-docs
