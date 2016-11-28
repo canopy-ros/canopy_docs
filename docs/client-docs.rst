@@ -16,24 +16,24 @@ Execution
 You will need to start the Canopy client node through a launch file. Here is an example.
 
 .. code-block:: xml
-    <node pkg="canopy_client" type="client_node.py" name="node_name" output="screen">
-      <param name="name" value="robot_name"/>
-      <param name="host" value="canopy-server-example.com"/>
-      <param name="port" value="8080"/>
-      <param name="private_key" value="private_key" />
-      <param name="description" value="example robot" />
-      <rosparam>
-        publishing:
-          - /topic1
-          - /topic2
-        types:
-          - geometry_msgs/Point
-          - std_msgs/String
-        trusted:
-          - ".*"
-          - other1 other2
-      </rosparam>
-    </node>
+   <node pkg="canopy_client" type="client_node.py" name="node_name" output="screen">
+     <param name="name" value="robot_name"/>
+     <param name="host" value="canopy-server-example.com"/>
+     <param name="port" value="8080"/>
+     <param name="private_key" value="private_key" />
+     <param name="description" value="example robot" />
+     <rosparam>
+       publishing:
+         - /topic1
+         - /topic2
+       types:
+         - geometry_msgs/Point
+         - std_msgs/String
+       trusted:
+         - ".*"
+         - other1 other2
+     </rosparam>
+   </node>
 
 The "name" parameter is the name that the robot will appear as on the network. Messages published over Canopy appear on other robots under the topic `robot_name/topicname`.
 
