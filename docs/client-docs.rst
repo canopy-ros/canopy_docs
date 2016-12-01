@@ -6,7 +6,7 @@ This page will help you set up the Canopy client so you can connect to an existi
 Installation
 ------------
 
-.. code-block::
+.. code-block:: bash
 
     $ cd <YOUR CATKIN WORKSPACE>/src
     $ git clone https://github.com/baalexander/rospy_message_converter
