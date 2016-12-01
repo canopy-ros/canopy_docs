@@ -45,11 +45,27 @@ You will need to start the Canopy client node through a launch file. Here is an 
 	</node>
 
 ================  =============================================================
-| Parameter       Description
+Parameter         Description
 ----------------  -------------------------------------------------------------
 `name`            | Name that the robot will appear as on the network.
                     Messages published over Canopy appear on other
                     robots under the topic robot_name/topicname
+`host`, `port`    | Host and port of the Canopy Server
+`private_key`     | Used to isolate groups of robots sharing the same server.
+                    Ensures that all robots on the desired communication
+                    network have the same private key. If you would like to
+                    use the dashboard to view data in real time and use the
+                    Platform-as-a-service system, you will need to go to
+                    canopy-server-example.com:3000 and create an account,
+                    which will generate a private key
+`description`     | A short text description of the robot
+`publishing`      | A list of topics that will be published through Canopy
+`types`           | A list of message types for the respective topics in
+                    `publishing`
+`trusted`         | A list of which other robots should be able to receive
+                    messages from a published topic. Each item in the list
+                    corresponds to one topic and should be a space-separated
+                    list of regular expressions
 ================  =============================================================
 
 .. +---------------+-------------------------------------------------------------+
