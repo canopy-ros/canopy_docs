@@ -7,11 +7,11 @@ Installation
 ------------
 
 ```bash
-    $ cd <YOUR CATKIN WORKSPACE>/src
-    $ git clone https://github.com/baalexander/rospy_message_converter
-    $ git clone https://github.com/canopy-ros/canopy_client
-    $ cd ..
-    $ catkin_make
+$ cd <YOUR CATKIN WORKSPACE>/src
+$ git clone https://github.com/baalexander/rospy_message_converter
+$ git clone https://github.com/canopy-ros/canopy_client
+$ cd ..
+$ catkin_make
 ```
 
 Execution
@@ -20,24 +20,24 @@ Execution
 You will need to start the Canopy client node through a launch file. Here is an example.
 
 ```xml
-	<node pkg="canopy_client" type="client_node.py" name="node_name" output="screen">
-		<param name="name" value="robot_name"/>
-		<param name="host" value="canopy-server-example.com"/>
-		<param name="port" value="8080"/>
-		<param name="private_key" value="private_key" />
-		<param name="description" value="example robot" />
-		<rosparam>
-			publishing:
-				- /topic1
-				- /topic2
-			types:
-				- geometry_msgs/Point
-				- std_msgs/String
-			trusted:
-				- ".*"
-				- other1 other2
-		</rosparam>
-	</node>
+<node pkg="canopy_client" type="client_node.py" name="node_name" output="screen">
+    <param name="name" value="robot_name"/>
+    <param name="host" value="canopy-server-example.com"/>
+    <param name="port" value="8080"/>
+    <param name="private_key" value="private_key" />
+    <param name="description" value="example robot" />
+    <rosparam>
+        publishing:
+            - /topic1
+            - /topic2
+        types:
+            - geometry_msgs/Point
+            - std_msgs/String
+        trusted:
+            - ".*"
+            - other1 other2
+    </rosparam>
+</node>
 ```
 
 | Parameter    | Description                                                                                                                                                                                                                                                                                                                                                                   |
