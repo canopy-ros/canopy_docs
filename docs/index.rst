@@ -10,7 +10,7 @@ Canopy, a cloud robotics framework for robots running ROS (Robot Operating Syste
 
 Canopy consists of a server stack and a client ROS package. The server acts as the central hub for all communication.
 
-The code for both the server stack and client package are open source, and are available on `GitHub <https://github.com/canopy-ros>`_.
+The code for both the server stack and client package are open source, and are available on `GitHub <https://github.com/canopy-ros>`.
 
 .. toctree::
    :maxdepth: 2

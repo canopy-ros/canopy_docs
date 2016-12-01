@@ -44,8 +44,8 @@ source_parsers = {
 }
 
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = ['.md']
+source_suffix = ['.rst', '.md']
+# source_suffix = ['.md']
 
 # The encoding of source files.
 #
