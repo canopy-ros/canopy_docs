@@ -14,17 +14,12 @@ Installation
     $ catkin_make
 ```
 
-> .. 1. Clone the repository at `https://github.com/baalexander/rospy_message_converter <https://github.com/baalexander/rospy_message_converter>`_ into your catkin workspace.
-> .. 2. Clone the repository at `https://github.com/canopy-ros/canopy_client <https://github.com/canopy-ros/canopy_client>`_ into your catkin workspace.
-> .. 3. Run ``catkin_make`` to install both packages.
-
 Execution
 ---------
 
 You will need to start the Canopy client node through a launch file. Here is an example.
 
 ```xml
-
 	<node pkg="canopy_client" type="client_node.py" name="node_name" output="screen">
 		<param name="name" value="robot_name"/>
 		<param name="host" value="canopy-server-example.com"/>
@@ -54,4 +49,4 @@ You will need to start the Canopy client node through a launch file. Here is an 
 | description  | contains a short text description of the robot                                                                                                                                                                                                                                                                                                                                |
 | publishing   | list of topic names                                                                                                                                                                                                                                                                                                                                                           |
 | types        | contains the message types for each topic, in the same order as above                                                                                                                                                                                                                                                                                                         |
-| trusted      | allows you to specify which other robots should be able to receive messages from a published topic. Each item in the list corresponds to one topic and should be a space-separated list of regular expressions
+| trusted      | allows you to specify which other robots should be able to receive messages from a published topic. Each item in the list corresponds to one topic and should be a space-separated list of regular expressions                                                                                                                                                                |
