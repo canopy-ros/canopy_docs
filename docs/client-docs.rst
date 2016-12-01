@@ -44,20 +44,50 @@ You will need to start the Canopy client node through a launch file. Here is an 
 		</rosparam>
 	</node>
 
-The "name" parameter is the name that the robot will appear as on the network. Messages published over Canopy appear on other robots under the topic `robot_name/topicname`.
+.. =========  ===========
+.. Parameter  Description
+.. ===========  ===========
+..
+.. name         name that the robot will appear as on the network. Messages published over Canopy appear on other robots under the topic `robot_name/topicname`
+.. host         URL of the Canopy server
+.. port         port of the Canopy server
+.. private_key  used to isolate groups of robots sharing the same server. Ensure that all robots on the desired communication network have the same private key. If you would like to use the dashboard to view data in real time and use the Platform-as-a-service system, you will need to go to `canopy-server-example.com:3000` and create an account, which will generate a private key
+.. ===========  ===========
 
-The "host" parameter is the URL of the Canopy server.
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter    | Description                                                                                                                                                                                                                                                                                                                                                                  |
++==============+==============================================================================================================================================================================================================================================================================================================================================================================+
+| name         | name that the robot will appear as on the network. Messages published over Canopy appear on other robots under the topic `robot_name/topicname`                                                                                                                                                                                                                              |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| host         | URL of the Canopy server                                                                                                                                                                                                                                                                                                                                                     |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| port         | port of the Canopy server                                                                                                                                                                                                                                                                                                                                                    |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| private_key  | used to isolate groups of robots sharing the same server. Ensure that all robots on the desired communication network have the same private key. If you would like to use the dashboard to view data in real time and use the Platform-as-a-service system, you will need to go to `canopy-server-example.com:3000` and create an account, which will generate a private key |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| description  | contains a short text description of the robot                                                                                                                                                                                                                                                                                                                               |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| publishing   | list of topic names                                                                                                                                                                                                                                                                                                                                                          |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| types        | contains the message types for each topic, in the same order as above                                                                                                                                                                                                                                                                                                        |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| trusted      | allows you to specify which other robots should be able to receive messages from a published topic. Each item in the list corresponds to one topic and should be a space-separated list of regular expressions                                                                                                                                                               |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-The "port" parameter is the port of the Canopy server.
-
-The "private_key" parameter is used to isolate groups of robots sharing the same server. Ensure that all robots on the desired communication network have the same private key. If you would like to use the dashboard to view data in real time and use the Platform-as-a-service system, you will need to go to `canopy-server-example.com:3000` and create an account, which will generate a private key.
-
-The "description" parameter contains a short text description of the robot.
-
-The parameters under ``<rosparam>`` specify which topics the Canopy client node should publish over the network.
-
-The "publishing" list is the list of topic names.
-
-The "types" list contains the message types for each topic, in the same order as above.
-
-The "trusted" list allows you to specify which other robots should be able to receive messages from a published topic. Each item in the list corresponds to one topic and should be a space-separated list of regular expressions.
+.. The "name" parameter is the name that the robot will appear as on the network. Messages published over Canopy appear on other robots under the topic `robot_name/topicname`.
+..
+.. The "host" parameter is the URL of the Canopy server.
+..
+.. The "port" parameter is the port of the Canopy server.
+..
+.. The "private_key" parameter is used to isolate groups of robots sharing the same server. Ensure that all robots on the desired communication network have the same private key. If you would like to use the dashboard to view data in real time and use the Platform-as-a-service system, you will need to go to `canopy-server-example.com:3000` and create an account, which will generate a private key.
+..
+.. The "description" parameter contains a short text description of the robot.
+..
+.. The parameters under ``<rosparam>`` specify which topics the Canopy client node should publish over the network.
+..
+.. The "publishing" list is the list of topic names.
+..
+.. The "types" list contains the message types for each topic, in the same order as above.
+..
+.. The "trusted" list allows you to specify which other robots should be able to receive messages from a published topic. Each item in the list corresponds to one topic and should be a space-separated list of regular expressions.
