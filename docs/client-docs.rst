@@ -6,9 +6,17 @@ This page will help you set up the Canopy client so you can connect to an existi
 Installation
 ------------
 
-1. Clone the repository at `https://github.com/baalexander/rospy_message_converter <https://github.com/baalexander/rospy_message_converter>`_ into your catkin workspace.
-2. Clone the repository at `https://github.com/canopy-ros/canopy_client <https://github.com/canopy-ros/canopy_client>`_ into your catkin workspace.
-3. Run ``catkin_make`` to install both packages.
+.. code-block::
+
+    $ cd <YOUR CATKIN WORKSPACE>/src
+    $ git clone https://github.com/baalexander/rospy_message_converter
+    $ git clone https://github.com/canopy-ros/canopy_client
+    $ cd ..
+    $ catkin_make
+
+.. 1. Clone the repository at `https://github.com/baalexander/rospy_message_converter <https://github.com/baalexander/rospy_message_converter>`_ into your catkin workspace.
+.. 2. Clone the repository at `https://github.com/canopy-ros/canopy_client <https://github.com/canopy-ros/canopy_client>`_ into your catkin workspace.
+.. 3. Run ``catkin_make`` to install both packages.
 
 Execution
 ---------
